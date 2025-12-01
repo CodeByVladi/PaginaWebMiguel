@@ -4,32 +4,42 @@ const AboutPage = ({ poetName }) => {
   const bio = `${poetName} es un alma libre que ha dedicado su vida a la poesía, explorando las profundidades del ser humano y la belleza del mundo a través de sus versos. Nacido en Jinotepe Carazo, Nicaragua, su pasión por las letras floreció desde temprana edad. Su obra se caracteriza por su lirismo profundo, su exploración de la naturaleza y su crítica social sutil. Ha sido galardonado con. Cuando no está escribiendo, disfruta pasear por la naturaleza, leer clásicos y escuchar música.`;
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-gray-900 min-h-screen pt-24">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
-          Sobre {poetName}
+    <section className="py-16 bg-gradient-to-br from-gray-50 via-indigo-50/30 to-purple-50/30 dark:from-gray-900 dark:via-indigo-950/30 dark:to-purple-950/30 min-h-screen pt-24 relative overflow-hidden">
+      {/* Animated background blobs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300/20 dark:bg-purple-600/10 rounded-full blur-3xl animate-blob"></div>
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-indigo-300/20 dark:bg-indigo-600/10 rounded-full blur-3xl animate-blob" style={{animationDelay: '2s'}}></div>
+      
+      <div className="container mx-auto px-6 max-w-4xl relative z-10">
+        <div className="text-center mb-4 animate-fade-in">
+          <span className="inline-block px-6 py-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-bold rounded-full shadow-lg mb-4">
+            Sobre el Autor
+          </span>
+        </div>
+        <h2 className="text-5xl font-bold text-center bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-12 animate-fade-in-up">
+          {poetName}
         </h2>
-        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-8">
-          <div className="flex-shrink-0">
+        <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-8 border border-indigo-200/50 dark:border-indigo-700/50 animate-fade-in-up" style={{animationDelay: '150ms'}}>
+          <div className="flex-shrink-0 relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-full blur opacity-75 group-hover:opacity-100 animate-pulse-slow transition-opacity"></div>
             <img
               src="/imagenes/FotoMiguel.png" // Reemplazar con la foto real del papá
               alt={`Foto de ${poetName}`}
-              className="w-48 h-48 rounded-full object-cover shadow-md border-4 border-purple-200 dark:border-blue-700"
+              className="relative w-48 h-48 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-700 transform group-hover:scale-105 transition-transform duration-300"
             />
           </div>
           <div className="text-center md:text-left">
-            <h3 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">
+            <h3 className="text-3xl font-semibold bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent mb-4">
               {poetName}
             </h3>
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6 text-lg">
               {bio}
             </p>
-            <div className="flex justify-center md:justify-start space-x-6 mt-6">
+            <div className="flex justify-center md:justify-start space-x-6 mt-8">
               <a
                 href="https://www.facebook.com/miguel.Zuniga.678235/about"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="group relative p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-white hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-500 dark:hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -45,7 +55,7 @@ const AboutPage = ({ poetName }) => {
                 href="https://twitter.com/[tu_perfil]"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-300 transition-colors"
+                className="group relative p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-white hover:bg-gradient-to-br hover:from-sky-500 hover:to-blue-400 dark:hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -61,7 +71,7 @@ const AboutPage = ({ poetName }) => {
                 href="https://instagram.com/[tu_perfil]"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-400 transition-colors"
+                className="group relative p-3 bg-gray-100 dark:bg-gray-700 rounded-full text-gray-600 dark:text-gray-300 hover:text-white hover:bg-gradient-to-br hover:from-pink-600 hover:via-purple-600 hover:to-orange-500 dark:hover:text-white transition-all duration-300 transform hover:scale-110 hover:shadow-xl"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

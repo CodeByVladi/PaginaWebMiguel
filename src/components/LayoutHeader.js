@@ -48,10 +48,13 @@ const LayoutHeader = ({ toggleDarkMode, isDarkMode, setCurrentPage, toggleMenu, 
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm">
+    <header className="fixed w-full top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-xl shadow-lg border-b border-gray-200/50 dark:border-gray-700/50 transition-all duration-300">
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gray-800 dark:text-white">
-          Versos de Miguel Ángel
+        <div className="group text-2xl font-bold bg-gradient-to-r from-purple-600 to-indigo-600 dark:from-purple-400 dark:to-indigo-400 bg-clip-text text-transparent hover:scale-105 transition-transform duration-300 cursor-pointer">
+          <span className="relative">
+            Versos de Miguel Ángel
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
+          </span>
         </div>
         <div className="flex items-center space-x-4">
           {/* Botón de búsqueda / Barra de búsqueda */}
@@ -101,47 +104,53 @@ const LayoutHeader = ({ toggleDarkMode, isDarkMode, setCurrentPage, toggleMenu, 
             </svg>
           </button>
 
-          {/* Menú de navegación para pantallas grandes */}
-          <div className="hidden lg:flex items-center space-x-4">
+          {/* Menú de navegación para pantallas grandes con hover effects */}
+          <div className="hidden lg:flex items-center space-x-2">
             <button
               onClick={() => setCurrentPage('home')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Inicio
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('books')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Libros
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('poems')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Poemas
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('videos')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Videos
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('about')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Biografía
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('contact')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors duration-300 font-medium group"
             >
               Contacto
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-indigo-600 group-hover:w-full transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage('adminLogin')}
-              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+              className="ml-2 px-4 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full text-sm font-semibold hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               Admin
             </button>
