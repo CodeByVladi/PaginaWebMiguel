@@ -13,6 +13,7 @@ import SideMenu from "./components/SideMenu";
 import AdminLoginPage from "./components/AdminLoginPage";
 import AdminDashboardPage from "./components/AdminDashboardPage";
 import DailyInspiration from "./components/DailyInspiration";
+import VideosPage from "./components/VideosPage";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -24,7 +25,16 @@ const App = () => {
   const poetName = "Miguel Ángel González Zuniga";
 
   useEffect(() => {
-    // Detectar preferencia del sistema o usar un valor por defecto
+    // Preferencia guardada o preferencia del sistema
+    const saved = localStorage.getItem("theme");
+    if (saved === "dark") {
+      setIsDarkMode(true);
+      return;
+    }
+    if (saved === "light") {
+      setIsDarkMode(false);
+      return;
+    }
     const prefersDark =
       window.matchMedia &&
       window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -42,7 +52,11 @@ const App = () => {
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
+    setIsDarkMode((prev) => {
+      const next = !prev;
+      localStorage.setItem("theme", next ? "dark" : "light");
+      return next;
+    });
   };
 
   const toggleMenu = () => {
@@ -80,6 +94,8 @@ const App = () => {
         return <AboutPage poetName={poetName} />;
       case "contact":
         return <ContactPage poetName={poetName} />;
+      case "videos":
+        return <VideosPage />;
       case "adminLogin":
         return (
           <AdminLoginPage

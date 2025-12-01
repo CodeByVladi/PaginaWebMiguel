@@ -122,6 +122,12 @@ const LayoutHeader = ({ toggleDarkMode, isDarkMode, setCurrentPage, toggleMenu, 
               Poemas
             </button>
             <button
+              onClick={() => setCurrentPage('videos')}
+              className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+            >
+              Videos
+            </button>
+            <button
               onClick={() => setCurrentPage('about')}
               className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
             >

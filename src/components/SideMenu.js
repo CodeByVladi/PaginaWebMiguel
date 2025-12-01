@@ -37,6 +37,12 @@ const SideMenu = ({ isOpen, toggleMenu, setCurrentPage }) => {
             Poemas
           </button>
           <button
+            onClick={() => handleNavigation('videos')}
+            className="text-left text-gray-800 dark:text-white text-lg hover:text-purple-600 dark:hover:text-blue-400 transition-colors"
+          >
+            Videos
+          </button>
+          <button
             onClick={() => handleNavigation('about')}
             className="text-left text-gray-800 dark:text-white text-lg hover:text-purple-600 dark:hover:text-blue-400 transition-colors"
           >
