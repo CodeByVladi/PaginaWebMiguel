@@ -4,6 +4,23 @@
 
 /* Animaciones personalizadas épicas para toda la página */
 @layer utilities {
+  /* === RESETS Y RESPONSIVE BASE === */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; /* Previene scroll horizontal en móvil */
+  }
+
+  img, video, canvas, svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* === ANIMACIONES BÁSICAS === */
   @keyframes fade-in {
     from {

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { featuredPoems } from '../mock/poems';
 
 const HomePoemSection = ({ setCurrentPage, setSelectedPoem }) => {
+  const [current, setCurrent] = useState(0);
   const handleViewPoem = (poem) => {
     setSelectedPoem(poem);
     setCurrentPage('poemDetail');
   };
+
+  const next = () => setCurrent((prev) => (prev + 1) % featuredPoems.length);
+  const prev = () => setCurrent((prev) => (prev - 1 + featuredPoems.length) % featuredPoems.length);
 
   return (
     <section className="py-20 bg-gradient-to-b from-white via-purple-50 to-white dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden">
@@ -29,8 +33,49 @@ const HomePoemSection = ({ setCurrentPage, setSelectedPoem }) => {
           </p>
         </div>
 
-        {/* Grid de poemas con animaciones escalonadas */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Modo móvil: carrusel de 1 poema con flechas */}
+        <div className="block md:hidden">
+          <div
+            className="group relative bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all duration-500 cursor-pointer animate-fade-in-up"
+            onClick={() => handleViewPoem(featuredPoems[current])}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+            <div className="relative bg-white dark:bg-gray-800 m-[2px] rounded-2xl p-6">
+              <div className="absolute top-4 right-4 w-10 h-10 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                {current + 1}/{featuredPoems.length}
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 pr-12">
+                {featuredPoems[current].title}
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 italic mb-5 line-clamp-4 leading-relaxed">
+                {featuredPoems[current].content.substring(0, 200)}...
+              </p>
+              <div className="flex items-center justify-between mt-2">
+                <button
+                  onClick={(e) => { e.stopPropagation(); prev(); }}
+                  className="px-4 py-2 rounded-full border border-purple-300 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-gray-700"
+                >
+                  ←
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); handleViewPoem(featuredPoems[current]); }}
+                  className="px-6 py-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-full font-semibold"
+                >
+                  Leer más
+                </button>
+                <button
+                  onClick={(e) => { e.stopPropagation(); next(); }}
+                  className="px-4 py-2 rounded-full border border-purple-300 text-purple-600 dark:text-purple-400 hover:bg-purple-50 dark:hover:bg-gray-700"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Modo escritorio: grid intacto */}
+        <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredPoems.map((poem, index) => (
             <div
               key={index}
@@ -38,23 +83,17 @@ const HomePoemSection = ({ setCurrentPage, setSelectedPoem }) => {
               style={{ animationDelay: `${index * 150}ms` }}
               onClick={() => handleViewPoem(poem)}
             >
-              {/* Borde gradiente animado */}
               <div className="absolute inset-0 bg-gradient-to-r from-purple-400 via-pink-400 to-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
-              
               <div className="relative bg-white dark:bg-gray-800 m-[2px] rounded-2xl p-8 h-full">
-                {/* Número decorativo */}
                 <div className="absolute top-4 right-4 w-12 h-12 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
                   {index + 1}
                 </div>
-
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 pr-12 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300">
                   {poem.title}
                 </h3>
-                
                 <p className="text-gray-700 dark:text-gray-300 italic mb-6 line-clamp-4 leading-relaxed">
                   {poem.content.substring(0, 200)}...
                 </p>
-                
                 <button
                   onClick={(e) => { e.stopPropagation(); handleViewPoem(poem); }}
                   className="inline-flex items-center text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 font-semibold group-hover:gap-2 transition-all duration-300"

@@ -14,6 +14,7 @@ import AdminLoginPage from "./components/AdminLoginPage";
 import AdminDashboardPage from "./components/AdminDashboardPage";
 import DailyInspiration from "./components/DailyInspiration";
 import VideosPage from "./components/VideosPage";
+import HomeVideosCTA from "./components/HomeVideosCTA";
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -75,6 +76,7 @@ const App = () => {
               setSelectedPoem={setSelectedPoem}
             />
             <DailyInspiration />
+            <HomeVideosCTA setCurrentPage={setCurrentPage} />
           </>
         );
       case "books":
@@ -123,7 +125,6 @@ const App = () => {
         );
     }
   };
-
   return (
     <div className="font-sans antialiased text-gray-900 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
       <LayoutHeader
@@ -138,7 +139,7 @@ const App = () => {
         toggleMenu={toggleMenu}
         setCurrentPage={setCurrentPage}
       />
-      <main className="min-h-screen">{renderPage()}</main>
+      <main className="min-h-screen pt-20 sm:pt-24">{renderPage()}</main>
       <LayoutFooter />
     </div>
   );

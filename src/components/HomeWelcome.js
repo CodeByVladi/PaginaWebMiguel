@@ -10,7 +10,7 @@ const HomeWelcome = ({ poetName, setCurrentPage }) => {
   }, []);
 
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28">
       {/* Fondo con gradiente animado */}
       <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-indigo-800 dark:from-gray-900 dark:via-purple-900 dark:to-black animate-gradient-shift"></div>
       
