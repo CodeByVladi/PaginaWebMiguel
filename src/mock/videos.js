@@ -70,7 +70,7 @@ export const videos = [
     type: 'local',
     title: 'Poema',
     reciter: 'Miguel Gonzalez',
-    description: 'Video enviado por colaborador.',
+    description: 'Autor de todos los poemas.',
     url: '/videos/video5868484180421122853.mp4'
   }
 ];
