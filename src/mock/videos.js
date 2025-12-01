@@ -56,5 +56,21 @@ export const videos = [
     reciter: 'Pedro Ambrogi',
     description: 'Video enviado por colaborador.',
     url: '/videos/video5868484180421122837.mp4'
+  },
+  {
+    id: 'video-8',
+    type: 'local',
+    title: 'Poema',
+    reciter: 'Angie Navarrete',
+    description: 'Video enviado por colaborador.',
+    url: '/videos/video5868484180421122852.mp4'
+  },
+  {
+    id: 'video-9',
+    type: 'local',
+    title: 'Poema',
+    reciter: 'Miguel Gonzalez',
+    description: 'Video enviado por colaborador.',
+    url: '/videos/video5868484180421122853.mp4'
   }
 ];
