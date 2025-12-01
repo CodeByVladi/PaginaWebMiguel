@@ -21,6 +21,9 @@ const toVimeoEmbed = (url) => {
   }
 };
 
+// Títulos se definen en el mock; si falta, usamos un fallback simple.
+const getTitle = (video) => video.title || 'Poema';
+
 const VideoFrame = ({ type, url, title }) => {
   if (type === 'youtube') {
     return (
@@ -71,9 +74,12 @@ const VideosPage = () => {
             key={v.id}
             className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden"
           >
-            <VideoFrame type={v.type} url={v.url} title={v.title} />
+            <VideoFrame type={v.type} url={v.url} title={getTitle(v)} />
             <div className="p-4">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{v.title}</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{getTitle(v)}</h2>
+              {v.reciter && (
+                <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">Recita: {v.reciter}</p>
+              )}
               {v.description && (
                 <p className="mt-1 text-sm text-gray-600 dark:text-gray-300">{v.description}</p>
               )}
