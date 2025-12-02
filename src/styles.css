@@ -2,7 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
+/* === SCROLL BEHAVIOR GLOBAL === */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Mejora del scroll en móvil para evitar rebote */
+@supports (-webkit-overflow-scrolling: touch) {
+  body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* Animaciones personalizadas épicas para toda la página */
+@layer utilities {
+  /* === THEME COLOR TOKENS (Light/Dark) === */
+  :root {
+    --brand-start: #f59e0b; /* amber-500 */
+    --brand-end: #dc2626;   /* red-600 */
+    --link: #ea580c;        /* orange-600 */
+    --ring: #fb923c;        /* orange-400 */
+    --surface: rgba(255,255,255,0.85);
+    --surface-strong: rgba(255,255,255,0.95);
+    --border: rgba(245,158,11,0.15);
+    --text: #1f2937;        /* gray-800 */
+    --muted: #6b7280;       /* gray-500 */
+    --glass: rgba(255,255,255,0.7);
+    --overlay: rgba(251,146,60,0.08);
+  }
+
+  .dark {
+    --brand-start: #06b6d4; /* cyan-500 */
+    --brand-end: #4338ca;   /* indigo-700 */
+    --link: #22d3ee;        /* cyan-300 */
+    --ring: #22d3ee;        /* cyan-300 */
+    --surface: rgba(17,24,39,0.72);       /* gray-900 */
+    --surface-strong: rgba(17,24,39,0.86);
+    --border: rgba(255,255,255,0.14);
+    --text: #e5e7eb;        /* gray-200 */
+    --muted: #9ca3af;       /* gray-400 */
+    --glass: rgba(2,6,23,0.5);            /* slate-950 */
+    --overlay: rgba(0,0,0,0.45);
+  }
+}
+
+@layer components {
+  /* === THEME UTILITIES === */
+  .surface { background: var(--surface); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--border); }
+  .surface-strong { background: var(--surface-strong); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--border); }
+  .text-base-color { color: var(--text); }
+  .text-muted { color: var(--muted); }
+  .border-theme { border-color: var(--border); }
+
+  .theme-brand { background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); }
+  .theme-brand-text { background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .text-brand { color: var(--brand-end); }
+  .hover-text-brand { transition: color .2s ease; }
+  .hover-text-brand:hover { color: var(--brand-end); }
+
+  .btn-primary { 
+    background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); 
+    color: #fff; 
+    border-radius: 9999px; 
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
+    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+    /* Mejora táctil para móviles */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .btn-primary:hover { transform: translateY(-1px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
+  .btn-primary:active { transform: translateY(0) scale(0.98); }
+  
+  .btn-glass { 
+    background: var(--glass); 
+    color: var(--text); 
+    border: 2px solid var(--border); 
+    border-radius: 9999px; 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    transition: background .2s ease, transform .2s ease;
+    /* Mejora táctil para móviles */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  .btn-glass:hover { background: var(--surface); transform: translateY(-1px); }
+  .btn-glass:active { transform: scale(0.95); }
+
+  /* Halo de marca reutilizable (se adapta a light/dark) */
+  .halo-brand { position: absolute; inset: -8px; background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); filter: blur(32px); opacity: .6; border-radius: inherit; pointer-events: none; animation: pulse-slow 4s ease-in-out infinite; }
+}
+
 @layer utilities {
   /* === RESETS Y RESPONSIVE BASE === */
   *, *::before, *::after {
@@ -19,6 +113,31 @@
     max-width: 100%;
     height: auto;
     display: block;
+  }
+
+  /* === MEJORAS DE TOUCH PARA MÓVIL === */
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    cursor: pointer;
+  }
+
+  /* Mejorar el área de toque en elementos interactivos pequeños */
+  @media (max-width: 640px) {
+    button, a {
+      min-height: 44px; /* Tamaño mínimo recomendado para táctil */
+      min-width: 44px;
+    }
+  }
+
+  /* Prevenir zoom al hacer focus en inputs en iOS */
+  @media (max-width: 640px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="search"],
+    textarea {
+      font-size: 16px !important;
+    }
   }
 
   /* === ANIMACIONES BÁSICAS === */
@@ -85,8 +204,47 @@
     }
   }
 
+  @keyframes float1 {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(10px);
+    }
+  }
+
+  @keyframes float2 {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-30px) translateX(-15px);
+    }
+  }
+
+  @keyframes float3 {
+    0%, 100% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-25px) translateX(20px);
+    }
+  }
+
   .animate-float {
     animation: float linear infinite;
+  }
+
+  .animate-float1 {
+    animation: float1 8s ease-in-out infinite;
+  }
+
+  .animate-float2 {
+    animation: float2 10s ease-in-out infinite;
+  }
+
+  .animate-float3 {
+    animation: float3 9s ease-in-out infinite;
   }
 
   /* Efecto blob en movimiento */
@@ -207,6 +365,97 @@
   /* Scroll suave para toda la página */
   html {
     scroll-behavior: smooth;
+  }
+
+  /* Animación de nubes cruzando el cielo */
+  @keyframes cloud-drift {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.8;
+    }
+    90% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateX(calc(100vw + 300px));
+      opacity: 0;
+    }
+  }
+
+  /* Animación de estrellas parpadeantes */
+  @keyframes star-twinkle {
+    0%, 100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  /* Movimiento sutil de estrellas */
+  @keyframes star-move {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    100% {
+      transform: translateY(-10px) translateX(5px);
+    }
+  }
+
+  /* Gradiente radial para el sol */
+  .bg-gradient-radial {
+    background: radial-gradient(circle, var(--tw-gradient-stops));
+  }
+
+  /* Rayos del sol pulsantes */
+  @keyframes sun-ray {
+    0%, 100% {
+      opacity: 0.2;
+      transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1.1);
+    }
+  }
+
+  /* Estrellas fugaces */
+  @keyframes shooting-star {
+    0% {
+      transform: translateX(0) translateY(0) rotate(-45deg);
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-800px) translateY(400px) rotate(-45deg);
+      opacity: 0;
+    }
+  }
+
+  /* Nubes cruzando frente al sol */
+  @keyframes cloud-cross {
+    0% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.6;
+    }
+    90% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateX(200%);
+      opacity: 0;
+    }
   }
 
   /* Mejoras de rendimiento para animaciones */

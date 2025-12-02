@@ -62,66 +62,95 @@ const VideoFrame = ({ type, url, title }) => {
 
 const VideosPage = () => {
   return (
-    <section className="container mx-auto px-6 pt-28 pb-16">
-      {/* Header con animación de entrada */}
-      <header className="mb-12 text-center animate-fade-in">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 
-                       bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 
-                       bg-clip-text text-transparent">
-          Videos
-        </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-          Recitales y lecturas de poemas
-        </p>
-        <div className="mt-4 w-24 h-1 bg-gradient-to-r from-indigo-600 to-purple-600 dark:from-indigo-400 dark:to-purple-400 mx-auto rounded-full"></div>
-      </header>
+    <section className="py-20 bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 dark:from-gray-900 dark:via-slate-800 dark:to-gray-900 min-h-screen pt-24 relative overflow-hidden">
+      {/* Fondo animado épico */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-amber-400 to-orange-400 dark:from-cyan-500 dark:to-blue-500 rounded-full blur-3xl animate-blob"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-red-400 to-pink-400 dark:from-indigo-500 dark:to-purple-500 rounded-full blur-3xl animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/3 left-1/3 w-72 h-72 bg-gradient-to-br from-orange-300 to-red-300 dark:from-purple-500 dark:to-pink-500 rounded-full blur-3xl animate-blob animation-delay-4000"></div>
+      </div>
+      
+      {/* Partículas flotantes */}
+      <div className="absolute top-1/4 left-10 w-32 h-32 bg-orange-300/20 dark:bg-cyan-400/20 rounded-full blur-2xl animate-float1"></div>
+      <div className="absolute bottom-1/3 right-16 w-40 h-40 bg-red-300/20 dark:bg-indigo-400/20 rounded-full blur-2xl animate-float2"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        {/* Header mejorado */}
+        <header className="text-center mb-16 animate-fade-in">
+          <div className="inline-block mb-6 animate-bounce-slow">
+            <span className="inline-flex items-center gap-2 px-6 py-3 btn-glass theme-brand-text text-sm font-bold rounded-full shadow-xl border-2 border-orange-300/50 dark:border-cyan-400/30">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Galería de Videos
+            </span>
+          </div>
+          <h1 className="text-5xl md:text-7xl font-extrabold theme-brand-text mb-6 drop-shadow-xl animate-text-shimmer" style={{backgroundSize: '200% auto'}}>
+            Videos
+          </h1>
+          <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
+            Recitales y lecturas de poemas que dan vida a la palabra
+          </p>
+        </header>
 
-      {/* Grid de videos con animaciones escalonadas */}
-      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {videos.map((v, idx) => (
-          <article
-            key={v.id}
-            className="group rounded-2xl border border-gray-200 dark:border-gray-700 
-                       bg-white dark:bg-gray-800 shadow-lg overflow-hidden
-                       transform transition-all duration-500 hover:scale-105 hover:shadow-2xl
-                       hover:border-indigo-400 dark:hover:border-indigo-500
-                       animate-fade-in-up"
-            style={{ animationDelay: `${idx * 100}ms` }}
-          >
-            {/* Video con overlay sutil en hover */}
-            <div className="relative overflow-hidden">
-              <VideoFrame type={v.type} url={v.url} title={getTitle(v)} />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 
-                              group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
-            </div>
-            
-            {/* Contenido con mejor espaciado y tipografía */}
-            <div className="p-6 space-y-2">
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white 
-                             group-hover:text-indigo-600 dark:group-hover:text-indigo-400 
-                             transition-colors duration-300 line-clamp-2">
-                {getTitle(v)}
-              </h2>
+        {/* Grid mejorado */}
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {videos.map((v, idx) => (
+            <article
+              key={v.id}
+              className="group relative rounded-2xl overflow-visible transform transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up"
+              style={{ animationDelay: `${idx * 50}ms` }}
+            >
+              {/* Halo exterior brillante */}
+              <div className="absolute -inset-3 bg-gradient-to-r from-amber-400 via-orange-400 to-red-400 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-500 rounded-2xl blur-xl opacity-0 group-hover:opacity-70 transition-all duration-500"></div>
               
-              {v.reciter && (
-                <div className="flex items-center space-x-2">
-                  <svg className="w-4 h-4 text-indigo-600 dark:text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                  </svg>
-                  <p className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {v.reciter}
-                  </p>
+              {/* Tarjeta principal */}
+              <div className="relative surface backdrop-blur-xl rounded-2xl overflow-hidden shadow-xl border-2 border-orange-200/50 dark:border-cyan-400/30 group-hover:border-orange-400/70 dark:group-hover:border-cyan-400/70 transition-all duration-500">
+                {/* Video con overlay */}
+                <div className="relative overflow-hidden">
+                  <VideoFrame type={v.type} url={v.url} title={getTitle(v)} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                  
+                  {/* Play icon overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                      <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
                 </div>
-              )}
-              
-              {v.description && (
-                <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2 pt-1">
-                  {v.description}
-                </p>
-              )}
-            </div>
-          </article>
-        ))}
+                
+                {/* Contenido */}
+                <div className="p-6 space-y-3">
+                  <h2 className="text-xl font-bold text-base-color group-hover:theme-brand-text transition-colors duration-300 line-clamp-2">
+                    {getTitle(v)}
+                  </h2>
+                  
+                  {v.reciter && (
+                    <div className="flex items-center gap-2">
+                      <svg className="w-5 h-5 theme-brand-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      </svg>
+                      <p className="text-sm font-semibold text-base-color">
+                        {v.reciter}
+                      </p>
+                    </div>
+                  )}
+                  
+                  {v.description && (
+                    <>
+                      <div className="w-12 h-1 bg-gradient-to-r from-orange-400 to-red-400 dark:from-cyan-400 dark:to-indigo-400 group-hover:w-20 transition-all duration-300"></div>
+                      <p className="text-sm text-muted line-clamp-2 leading-relaxed">
+                        {v.description}
+                      </p>
+                    </>
+                  )}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
     </section>
   );

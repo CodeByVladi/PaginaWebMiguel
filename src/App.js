@@ -45,9 +45,14 @@ const App = () => {
     }
   }, [isDarkMode]);
 
-  // Al cambiar de sección, vuelve al inicio de la página
+  // Al cambiar de sección, vuelve al inicio de la página con scroll suave mejorado
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Scroll instantáneo primero para evitar animaciones raras
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    // Pequeño delay para asegurar que el contenido se renderizó
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
   }, [currentPage]);
 
   const toggleDarkMode = () => {
@@ -137,7 +142,7 @@ const App = () => {
         toggleMenu={toggleMenu}
         setCurrentPage={setCurrentPage}
       />
-      <main className="min-h-screen pt-20 sm:pt-24">{renderPage()}</main>
+      <main className="min-h-screen pt-16 sm:pt-20 md:pt-24">{renderPage()}</main>
       <LayoutFooter />
     </div>
   );
