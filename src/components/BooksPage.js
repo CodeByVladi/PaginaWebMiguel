@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import { allBooks } from '../mock/books';
+import BookFormatModal from './BookFormatModal';
 
 // NOTA: Si los libros tienen un campo "year" o "published", usarlo para ordenar por fecha. Si no, se puede agregar después.
 const BooksPage = () => {
   const [sortOption, setSortOption] = useState('az');
+  const [selectedBook, setSelectedBook] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBuyClick = (book) => {
+    if (book.formats && Object.keys(book.formats).length > 1) {
+      setSelectedBook(book);
+      setIsModalOpen(true);
+    } else {
+      window.open(book.amazonLink, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   // Si los libros tienen un campo "year" o "published", usarlo. Si no, solo ordenar por título.
   const getSortedBooks = () => {
@@ -93,22 +105,25 @@ const BooksPage = () => {
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">{book.title}</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">{book.author}</p>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-3">{book.summary}</p>
-                <a
-                  href={book.amazonLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  onClick={() => handleBuyClick(book)}
                   className="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300"
                 >
                   Comprar en Amazon
                   <svg className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+      <BookFormatModal
+        book={selectedBook}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };

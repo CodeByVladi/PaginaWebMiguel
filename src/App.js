@@ -26,20 +26,13 @@ const App = () => {
   const poetName = "Miguel Ángel González Zuniga";
 
   useEffect(() => {
-    // Preferencia guardada o preferencia del sistema
+    // Dark mode por defecto; si el usuario guardó "light", respetar su preferencia
     const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      setIsDarkMode(true);
-      return;
-    }
     if (saved === "light") {
       setIsDarkMode(false);
-      return;
+    } else {
+      setIsDarkMode(true);
     }
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    setIsDarkMode(prefersDark);
   }, []);
 
   useEffect(() => {

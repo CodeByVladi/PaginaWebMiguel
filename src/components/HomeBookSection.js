@@ -1,8 +1,21 @@
 import React, { useState } from 'react';
 import { popularBooks } from '../mock/books';
+import BookFormatModal from './BookFormatModal';
 
 const HomeBookSection = ({ setCurrentPage }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [selectedBook, setSelectedBook] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBuyClick = (book, e) => {
+    e.stopPropagation();
+    if (book.formats && Object.keys(book.formats).length > 1) {
+      setSelectedBook(book);
+      setIsModalOpen(true);
+    } else {
+      window.open(book.amazonLink, '_blank', 'noopener,noreferrer');
+    }
+  };
 
   const nextBook = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % popularBooks.length);
@@ -104,15 +117,13 @@ const HomeBookSection = ({ setCurrentPage }) => {
                     <h3 className="text-xl md:text-2xl font-bold text-center text-indigo-800 dark:text-indigo-200 mb-1 drop-shadow-sm">{book.title}</h3>
                     <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300 mb-2">{book.author}</p>
                     {/* Sin descripción en inicio, para que el título se vea claro */}
-                    <a
-                      href={book.amazonLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-4 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-pink-400/40 hover:scale-110 transition-all duration-300 animate-glow"
+                    <button
+                      onClick={(e) => handleBuyClick(book, e)}
+                      className="mt-2 bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg hover:shadow-pink-400/40 hover:scale-110 transition-all duration-300 animate-glow"
                     >
                       Comprar en Amazon
                       <span className="ml-2">→</span>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
@@ -147,6 +158,11 @@ const HomeBookSection = ({ setCurrentPage }) => {
           </button>
         </div>
       </div>
+      <BookFormatModal
+        book={selectedBook}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
