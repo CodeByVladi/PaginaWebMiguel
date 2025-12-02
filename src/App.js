@@ -52,6 +52,11 @@ const App = () => {
     }
   }, [isDarkMode]);
 
+  // Al cambiar de sección, vuelve al inicio de la página
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [currentPage]);
+
   const toggleDarkMode = () => {
     setIsDarkMode((prev) => {
       const next = !prev;
