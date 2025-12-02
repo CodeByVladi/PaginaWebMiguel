@@ -103,11 +103,13 @@ const HomeBookSection = ({ setCurrentPage }) => {
                   <div className="flex flex-col items-center justify-end h-2/5 px-4 pb-6 pt-2">
                     <h3 className="text-lg md:text-xl font-bold text-center text-indigo-800 dark:text-indigo-200 mb-1 line-clamp-2 drop-shadow-sm">{book.title}</h3>
                     <p className="text-xs md:text-sm text-center text-gray-600 dark:text-gray-300 mb-2">{book.author}</p>
-                    <div className="relative w-full">
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/90 dark:from-gray-900/90 to-transparent rounded-xl p-2 flex items-center justify-center text-xs md:text-sm text-gray-700 dark:text-gray-200 shadow-lg pointer-events-none">
+                    <div className="relative w-full mt-2">
+                      {/* Área de resumen: sólo ocupa la parte inferior, sin tapar título/autor */}
+                      <div className="absolute inset-x-0 bottom-0 h-24 sm:h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/85 dark:from-gray-900/85 to-transparent rounded-xl p-2 flex items-center justify-center text-xs md:text-sm text-gray-700 dark:text-gray-200 shadow-lg pointer-events-none">
                         <span className="line-clamp-4">{book.summary}</span>
                       </div>
-                      <div className="opacity-100 group-hover:opacity-0 transition-opacity duration-500 h-8"></div>
+                      {/* Espaciador para mantener layout sin overlay en hover */}
+                      <div className="h-8"></div>
                     </div>
                     <a
                       href={book.amazonLink}
