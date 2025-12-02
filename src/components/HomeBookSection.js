@@ -91,26 +91,19 @@ const HomeBookSection = ({ setCurrentPage }) => {
                 {/* Glassmorphism card */}
                 <div className="absolute inset-0 bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl border border-white/30 dark:border-indigo-900/30 shadow-xl overflow-hidden z-10">
                   {/* Portada con efecto 3D y sombra */}
-                  <div className="relative w-full h-3/5 flex items-center justify-center overflow-visible">
+                  <div className="relative w-full h-[70%] md:h-[68%] flex items-center justify-center overflow-visible">
                     <img
                       src={book.cover}
                       alt={book.title}
-                      className="w-40 h-60 object-contain object-center drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                      className="w-44 h-64 md:w-48 md:h-72 object-contain object-center drop-shadow-2xl group-hover:scale-105 transition-transform duration-500"
                       style={{ filter: 'drop-shadow(0 8px 32px rgba(80,0,120,0.18))' }}
                     />
                   </div>
                   {/* Info y resumen con animación */}
-                  <div className="flex flex-col items-center justify-end h-2/5 px-4 pb-6 pt-2">
-                    <h3 className="text-lg md:text-xl font-bold text-center text-indigo-800 dark:text-indigo-200 mb-1 line-clamp-2 drop-shadow-sm">{book.title}</h3>
-                    <p className="text-xs md:text-sm text-center text-gray-600 dark:text-gray-300 mb-2">{book.author}</p>
-                    <div className="relative w-full mt-2">
-                      {/* Área de resumen: sólo ocupa la parte inferior, sin tapar título/autor */}
-                      <div className="absolute inset-x-0 bottom-0 h-24 sm:h-28 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-white/85 dark:from-gray-900/85 to-transparent rounded-xl p-2 flex items-center justify-center text-xs md:text-sm text-gray-700 dark:text-gray-200 shadow-lg pointer-events-none">
-                        <span className="line-clamp-4">{book.summary}</span>
-                      </div>
-                      {/* Espaciador para mantener layout sin overlay en hover */}
-                      <div className="h-8"></div>
-                    </div>
+                  <div className="flex flex-col items-center justify-end h-[30%] md:h-[32%] px-4 pb-6 pt-2">
+                    <h3 className="text-xl md:text-2xl font-bold text-center text-indigo-800 dark:text-indigo-200 mb-1 drop-shadow-sm">{book.title}</h3>
+                    <p className="text-sm md:text-base text-center text-gray-600 dark:text-gray-300 mb-2">{book.author}</p>
+                    {/* Sin descripción en inicio, para que el título se vea claro */}
                     <a
                       href={book.amazonLink}
                       target="_blank"
