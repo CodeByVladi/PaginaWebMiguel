@@ -55,6 +55,7 @@ const LayoutFooter = () => {
           </div>
         </div>
       </div>
+    </footer>
   );
 };
 
