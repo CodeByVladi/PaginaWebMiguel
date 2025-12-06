@@ -368,6 +368,275 @@ que busquemos la luz con pasión.
 Sombras y luces, un eterno fulgor,
 un camino de vida, una dulce canción.`,
   },
+  {
+    title: "Puerta abierta en julio.",
+    excerpt:
+      "Quiero llegar con mi pluma a tu corazón, como un barco de papel que navega el aliento de un niño dormido...",
+    content: `Quiero llegar con mi pluma a tu corazón,
+como un barco de papel que navega el aliento
+de un niño dormido.
+
+Como esa pluma —liviana, no débil—
+que cae del roce de una nube
+cuando un ángel estornuda.
+
+Como el rocío que llega sin ruido,
+y no dobla los pétalos
+de las flores que olvidaste en el jarrón sin agua
+de tu recámara.
+
+No importa que sean plásticas:
+para el rocío no hay diferencia en lo bello.
+Y por eso, a veces, hay sudores súbitos
+en tu frente:
+el alma recuerda cosas que el cuerpo
+finge no haber sentido.
+
+He visto un colibrí beber de un espejo,
+y un pez dormido en una cuchara de miel.
+Así quiero entrar:
+no por la puerta,
+sino por el sueño que dejaste abierto
+una noche de julio sin luna.`,
+  },
+  {
+    title: "Descansas en mí.",
+    excerpt:
+      "Hay tardes en que tu recuerdo cae despacio, como una hoja cansada que busca un hombro donde quedarse...",
+    content: `Hay tardes
+en que tu recuerdo cae despacio,
+como una hoja cansada
+que busca un hombro donde quedarse.
+
+No hace ruido.
+Solo llega,
+y ya con eso
+la casa respira distinto.
+
+A veces pienso
+que la ternura es eso:
+una presencia leve
+que acomoda el mundo
+sin ensayo y actuación.
+
+Tu nombre,
+por ejemplo,
+se posa en mi pecho
+como un pajarito tibio
+que encuentra refugio
+sin saber que lo estaba buscando.
+
+Y yo lo dejo estar.
+Lo cubro con silencio,
+con esa calma antigua
+que sólo se ofrece
+cuando el alma reconoce
+algo que la sostiene.
+
+No digo amor.
+Es una palabra inmensa,
+y lo nuestro cabe mejor
+en gestos diminutos:
+una mirada que se prolonga,
+una risa que se queda pegada,
+el modo en que tu voz
+abre una ventana
+en cualquier oscuridad.
+
+A veces cierro los ojos
+y te imagino ahí,
+donde guardo las cosas frágiles.
+Y hay una paz tan honda
+que parece abrazo.
+
+Así me habitas:
+sin estruendo,
+sin promesas,
+sin reclamos.
+
+Apenas
+la forma en que descansas en mí
+cuando pienso en ti.`,
+  },
+  {
+    title: "Cristo entre las partículas",
+    excerpt:
+      "En el núcleo de lo invisible, donde el tiempo no corre y la luz aún no ha sido pronunciada, hay una cruz suspendida...",
+    content: `En el núcleo de lo invisible,
+donde el tiempo no corre
+y la luz aún no ha sido pronunciada,
+hay una cruz suspendida
+entre partículas que no obedecen leyes.
+Un cruce de energías
+que sangran silencio.
+
+Cristo no está en el Gólgota.
+Está en el corazón de una estrella que muere,
+en la intersección de dos galaxias
+que se rozan como párpados cerrados.
+
+Su cuerpo está hecho de probabilidades.
+Su rostro, de todos los rostros.
+Su herida,
+un agujero negro por donde cae el dolor del mundo
+y del otro lado brota
+la ternura inexplicable
+de seguir existiendo.
+
+Los ángeles ya no tienen alas.
+Son ecuaciones vibrantes,
+coros de átomos conscientes
+que giran en torno a su sacrificio
+como electrones adorando el vacío.
+
+No hay INRI sobre su cabeza,
+sino una cifra:
+el número que expresa
+la proporción exacta entre materia y amor.
+El equilibrio perdido.
+El misterio que une la carne al infinito.
+
+El madero,
+no tallado por manos humanas,
+es una intersección de dimensiones:
+el eje donde colapsa el alma y el cosmos,
+la intersección entre "yo soy"
+y "todo es".
+
+Su última palabra no fue palabra.
+Fue una vibración.
+Una onda que todavía viaja
+en dirección a nosotros,
+esperando ser recibida
+por corazones capaces de resonar.
+
+Y cuando exhala,
+no muere.
+Expande.
+
+Se vuelve eco en cada célula,
+mantra en cada soplo,
+presencia en cada decisión
+de amar cuando sería más fácil destruir.`,
+  },
+  {
+    title: "Amor de Lunes a Sábado.",
+    excerpt:
+      "Te amo con las manos partidas, con el cansancio hondo en la espalda y la alarma que no perdona, a las cinco y cuarto...",
+    content: `Te amo con las manos partidas,
+con el cansancio hondo en la espalda
+y la alarma que no perdona,
+a las cinco y cuarto.
+
+Te amo mientras el agua del fregadero
+se enfría sobre los platos
+y tu sombra se apoya
+en la puerta del baño,
+con una toalla al cuello
+y el mundo en los hombros.
+
+Nos amamos sin música de fondo,
+sin cenas a la luz de velas,
+pero con el sazón justo en su punto
+y el gas con la amenaza de cortarse en cualquier momento.
+
+Yo te veo cuando lavas la ropa,
+con el ceño fruncido,
+como si estuvieras lavando el alma
+de los días grises.
+
+Y tú me miras a veces
+como quien mira a un coche
+que aún sigue estacionado.
+
+No hay flores. Hay listas de mercado.
+No hay viajes. Hay pasajes para el bus,
+Y casi nada para el taxi.
+
+Hay saltos en el calendario y
+turnos rotativos,
+no hay promesas,
+pero hay amor.
+
+Como un clavo en la pared
+donde colgamos lo que importa.
+
+Y en la cama,
+no hay poesía,
+pero sí tus pies buscando los míos
+como quien tantea la vida en la oscuridad
+y quiere saber si aún estás acompañada.
+
+Somos dos obreros del cariño,
+picando piedra en la mina de la rutina,
+pero encontrando, de cuando en cuando,
+una gema en tu risa o entre los trastes,
+mi nota en tu lonchera,
+el beso con olor a pasta dental
+antes de dormirnos
+sin más rito que el cansancio compartido.
+
+Hay algo que no se va:
+un calor tibio en los objetos,
+como si nuestras manos
+los hubieran bendecido al pasar.
+
+Porque el amor, aquí,
+no es un fuego artificial.
+Es una lámpara vieja
+que no se apaga.`,
+  },
+  {
+    title: "Yo también puedo volar.",
+    excerpt:
+      "Dicen que el amor es lo más grande. Yo digo que es la paz, esa luz silenciosa que no exige nada...",
+    content: `Dicen que el amor es lo más grande.
+Yo digo que es la paz,
+esa luz silenciosa
+que no exige nada.
+
+El amor es vasto, sí,
+pero sin paz se vuelve un animal herido,
+una hoguera sin dueño.
+Imagina un amor en guerra:
+dos corazones descalzos
+pisando vidrios invisibles.
+La verdad, cuando llega,
+no trae abrigo—
+solo camina desnuda
+sobre el pecho,
+como si buscara dónde quedarse.
+
+¿De qué sirve ofrecer amor
+donde la indiferencia
+hace eco en cada cosa?
+El odio, blando y tibio,
+a veces imita al cariño;
+el egoísmo se disfraza
+con la ropa de la entrega.
+
+Donde el amor nace sucio
+brotan celos como maleza,
+y la desconfianza
+se acuesta en la misma cama.
+
+¿De qué sirve un amor
+que huele a infierno?
+
+Ven, llévate ese amor tuyo—
+ese que tiembla,
+que golpea,
+que se pierde.
+Deja el mío
+en la paz que lo cuida.
+
+Yo lo entregaré
+a manos limpias,
+pero mi corazón
+ya se abre al viento:
+yo también me libero,
+yo también puedo volar.`,
+  },
 ];
 
 // Los 3 poemas más recientes para mostrar en la página principal

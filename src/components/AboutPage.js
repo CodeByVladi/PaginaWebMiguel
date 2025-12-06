@@ -50,11 +50,17 @@ const AboutPage = ({ poetName }) => {
               <div className="absolute -inset-2 bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400 rounded-full blur-lg opacity-75"></div>
               <div className="relative">
                 <img
-                  src="/imagenes/FotoMiguel.png"
+                  src="/imagenes/miguel-author.jpg"
                   alt={`Foto de ${poetName}`}
-                  className="relative w-56 h-56 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-700"
+                  className="relative w-56 h-56 md:w-64 md:h-64 rounded-full object-cover shadow-2xl border-4 border-white dark:border-gray-700 hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    // Fallback si la imagen nueva no existe
+                    e.target.src = "/imagenes/FotoMiguel.png";
+                  }}
                 />
-                <div className="absolute inset-0 rounded-full border-4 border-amber-400/30 dark:border-cyan-400/30"></div>
+                <div className="absolute inset-0 rounded-full border-4 border-amber-400/30 dark:border-cyan-400/30 hover:border-amber-400/60 dark:hover:border-cyan-400/60 transition-colors duration-300"></div>
+                {/* Efecto overlay al hover */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-amber-500/0 via-orange-500/0 to-red-500/0 hover:from-amber-500/20 hover:via-orange-500/10 hover:to-red-500/20 dark:hover:from-cyan-400/10 dark:hover:via-blue-400/5 dark:hover:to-indigo-400/5 transition-all duration-300 pointer-events-none"></div>
               </div>
             </div>
 
