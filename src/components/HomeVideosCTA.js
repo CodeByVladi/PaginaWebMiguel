@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const HomeVideosCTA = ({ setCurrentPage }) => {
   return (
@@ -20,7 +20,7 @@ const HomeVideosCTA = ({ setCurrentPage }) => {
         <div className="inline-block mb-6 animate-bounce-slow">
           <span className="inline-flex items-center gap-2 px-6 py-3 btn-glass theme-brand-text text-sm font-bold rounded-full shadow-xl border-2 border-orange-300/50 dark:border-cyan-400/30 hover:scale-110 transition-all duration-300">
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+              <path d="M8 5v14l11-7z" />
             </svg>
             Momentos en video
           </span>
@@ -31,55 +31,91 @@ const HomeVideosCTA = ({ setCurrentPage }) => {
           <span className="block theme-brand-text drop-shadow-lg">
             ¿Quieres sentir los versos
           </span>
-          <span className="block mt-2 text-5xl sm:text-6xl md:text-7xl theme-brand-text drop-shadow-xl animate-text-shimmer" style={{backgroundSize: '200% auto'}}>
+          <span
+            className="block mt-2 text-5xl sm:text-6xl md:text-7xl theme-brand-text drop-shadow-xl animate-text-shimmer"
+            style={{ backgroundSize: "200% auto" }}
+          >
             en voz viva?
           </span>
         </h2>
 
         {/* Descripción mejorada */}
-        <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light animate-fade-in" style={{animationDelay: '400ms'}}>
-          Descubre recitaciones, presentaciones y fragmentos que dan vida a la poesía. 
+        <p
+          className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-10 leading-relaxed font-light animate-fade-in"
+          style={{ animationDelay: "400ms" }}
+        >
+          Descubre recitaciones, presentaciones y fragmentos que dan vida a la
+          poesía.
           <span className="block mt-2 text-base md:text-lg text-muted">
-            Sumérgete en la magia de las palabras pronunciadas con pasión y sentimiento.
+            Sumérgete en la magia de las palabras pronunciadas con pasión y
+            sentimiento.
           </span>
         </p>
 
         {/* Botón épico */}
-        <div className="relative inline-block group animate-fade-in-up" style={{animationDelay: '600ms'}}>
+        <div
+          className="relative inline-block group animate-fade-in-up"
+          style={{ animationDelay: "600ms" }}
+        >
           {/* Halo del botón */}
           <div className="absolute -inset-2 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 dark:from-cyan-400 dark:via-blue-500 dark:to-indigo-500 rounded-full blur-xl opacity-60 group-hover:opacity-100 transition-all duration-500 animate-pulse-slow"></div>
-          
+
           {/* Botón principal */}
           <button
-            onClick={() => setCurrentPage('videos')}
+            onClick={() => setCurrentPage("videos")}
             className="relative px-10 py-4 btn-primary text-white text-lg font-bold rounded-full shadow-2xl transform hover:scale-110 transition-all duration-300 flex items-center gap-3 mx-auto"
           >
             <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
+              <path d="M8 5v14l11-7z" />
             </svg>
             Ver Videos
-            <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </button>
         </div>
 
         {/* Iconos decorativos flotantes */}
-        <div className="mt-12 flex justify-center gap-8 opacity-40 animate-fade-in" style={{animationDelay: '800ms'}}>
+        <div
+          className="mt-12 flex justify-center gap-8 opacity-40 animate-fade-in"
+          style={{ animationDelay: "800ms" }}
+        >
           <div className="transform hover:scale-125 hover:opacity-100 transition-all duration-300">
-            <svg className="w-8 h-8 theme-brand-text" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/>
+            <svg
+              className="w-8 h-8 theme-brand-text"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z" />
             </svg>
           </div>
           <div className="transform hover:scale-125 hover:opacity-100 transition-all duration-300 animation-delay-150">
-            <svg className="w-8 h-8 theme-brand-text" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+            <svg
+              className="w-8 h-8 theme-brand-text"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
             </svg>
           </div>
           <div className="transform hover:scale-125 hover:opacity-100 transition-all duration-300 animation-delay-300">
-            <svg className="w-8 h-8 theme-brand-text" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z"/>
-              <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+            <svg
+              className="w-8 h-8 theme-brand-text"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3z" />
+              <path d="M17 11c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" />
             </svg>
           </div>
         </div>

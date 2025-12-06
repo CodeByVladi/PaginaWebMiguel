@@ -24,99 +24,171 @@ body {
   /* === THEME COLOR TOKENS (Light/Dark) === */
   :root {
     --brand-start: #f59e0b; /* amber-500 */
-    --brand-end: #dc2626;   /* red-600 */
-    --link: #ea580c;        /* orange-600 */
-    --ring: #fb923c;        /* orange-400 */
-    --surface: rgba(255,255,255,0.85);
-    --surface-strong: rgba(255,255,255,0.95);
-    --border: rgba(245,158,11,0.15);
-    --text: #1f2937;        /* gray-800 */
-    --muted: #6b7280;       /* gray-500 */
-    --glass: rgba(255,255,255,0.7);
-    --overlay: rgba(251,146,60,0.08);
+    --brand-end: #dc2626; /* red-600 */
+    --link: #ea580c; /* orange-600 */
+    --ring: #fb923c; /* orange-400 */
+    --surface: rgba(255, 255, 255, 0.85);
+    --surface-strong: rgba(255, 255, 255, 0.95);
+    --border: rgba(245, 158, 11, 0.15);
+    --text: #1f2937; /* gray-800 */
+    --muted: #6b7280; /* gray-500 */
+    --glass: rgba(255, 255, 255, 0.7);
+    --overlay: rgba(251, 146, 60, 0.08);
   }
 
   .dark {
     --brand-start: #06b6d4; /* cyan-500 */
-    --brand-end: #4338ca;   /* indigo-700 */
-    --link: #22d3ee;        /* cyan-300 */
-    --ring: #22d3ee;        /* cyan-300 */
-    --surface: rgba(17,24,39,0.72);       /* gray-900 */
-    --surface-strong: rgba(17,24,39,0.86);
-    --border: rgba(255,255,255,0.14);
-    --text: #e5e7eb;        /* gray-200 */
-    --muted: #9ca3af;       /* gray-400 */
-    --glass: rgba(2,6,23,0.5);            /* slate-950 */
-    --overlay: rgba(0,0,0,0.45);
+    --brand-end: #4338ca; /* indigo-700 */
+    --link: #22d3ee; /* cyan-300 */
+    --ring: #22d3ee; /* cyan-300 */
+    --surface: rgba(17, 24, 39, 0.72); /* gray-900 */
+    --surface-strong: rgba(17, 24, 39, 0.86);
+    --border: rgba(255, 255, 255, 0.14);
+    --text: #e5e7eb; /* gray-200 */
+    --muted: #9ca3af; /* gray-400 */
+    --glass: rgba(2, 6, 23, 0.5); /* slate-950 */
+    --overlay: rgba(0, 0, 0, 0.45);
   }
 }
 
 @layer components {
   /* === THEME UTILITIES === */
-  .surface { background: var(--surface); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid var(--border); }
-  .surface-strong { background: var(--surface-strong); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border: 1px solid var(--border); }
-  .text-base-color { color: var(--text); }
-  .text-muted { color: var(--muted); }
-  .border-theme { border-color: var(--border); }
+  .surface {
+    background: var(--surface);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--border);
+  }
+  .surface-strong {
+    background: var(--surface-strong);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--border);
+  }
+  .text-base-color {
+    color: var(--text);
+  }
+  .text-muted {
+    color: var(--muted);
+  }
+  .border-theme {
+    border-color: var(--border);
+  }
 
-  .theme-brand { background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); }
-  .theme-brand-text { background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .text-brand { color: var(--brand-end); }
-  .hover-text-brand { transition: color .2s ease; }
-  .hover-text-brand:hover { color: var(--brand-end); }
+  .theme-brand {
+    background-image: linear-gradient(
+      90deg,
+      var(--brand-start),
+      var(--brand-end)
+    );
+  }
+  .theme-brand-text {
+    background-image: linear-gradient(
+      90deg,
+      var(--brand-start),
+      var(--brand-end)
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-brand {
+    color: var(--brand-end);
+  }
+  .hover-text-brand {
+    transition: color 0.2s ease;
+  }
+  .hover-text-brand:hover {
+    color: var(--brand-end);
+  }
 
-  .btn-primary { 
-    background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); 
-    color: #fff; 
-    border-radius: 9999px; 
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15); 
-    transition: transform .2s ease, box-shadow .2s ease, opacity .2s ease;
+  .btn-primary {
+    background-image: linear-gradient(
+      90deg,
+      var(--brand-start),
+      var(--brand-end)
+    );
+    color: #fff;
+    border-radius: 9999px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
     /* Mejora táctil para móviles */
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
-  .btn-primary:hover { transform: translateY(-1px) scale(1.03); box-shadow: 0 12px 30px rgba(0,0,0,0.2); }
-  .btn-primary:active { transform: translateY(0) scale(0.98); }
-  
-  .btn-glass { 
-    background: var(--glass); 
-    color: var(--text); 
-    border: 2px solid var(--border); 
-    border-radius: 9999px; 
-    backdrop-filter: blur(8px); 
-    -webkit-backdrop-filter: blur(8px); 
-    transition: background .2s ease, transform .2s ease;
+  .btn-primary:hover {
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  .btn-primary:active {
+    transform: translateY(0) scale(0.98);
+  }
+
+  .btn-glass {
+    background: var(--glass);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 9999px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background 0.2s ease, transform 0.2s ease;
     /* Mejora táctil para móviles */
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
   }
-  .btn-glass:hover { background: var(--surface); transform: translateY(-1px); }
-  .btn-glass:active { transform: scale(0.95); }
+  .btn-glass:hover {
+    background: var(--surface);
+    transform: translateY(-1px);
+  }
+  .btn-glass:active {
+    transform: scale(0.95);
+  }
 
   /* Halo de marca reutilizable (se adapta a light/dark) */
-  .halo-brand { position: absolute; inset: -8px; background-image: linear-gradient(90deg, var(--brand-start), var(--brand-end)); filter: blur(32px); opacity: .6; border-radius: inherit; pointer-events: none; animation: pulse-slow 4s ease-in-out infinite; }
+  .halo-brand {
+    position: absolute;
+    inset: -8px;
+    background-image: linear-gradient(
+      90deg,
+      var(--brand-start),
+      var(--brand-end)
+    );
+    filter: blur(32px);
+    opacity: 0.6;
+    border-radius: inherit;
+    pointer-events: none;
+    animation: pulse-slow 4s ease-in-out infinite;
+  }
 }
 
 @layer utilities {
   /* === RESETS Y RESPONSIVE BASE === */
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box;
   }
 
-  html, body {
+  html,
+  body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden; /* Previene scroll horizontal en móvil */
   }
 
-  img, video, canvas, svg {
+  img,
+  video,
+  canvas,
+  svg {
     max-width: 100%;
     height: auto;
     display: block;
   }
 
   /* === MEJORAS DE TOUCH PARA MÓVIL === */
-  button, a, [role="button"] {
+  button,
+  a,
+  [role="button"] {
     -webkit-tap-highlight-color: transparent;
     touch-action: manipulation;
     cursor: pointer;
@@ -124,7 +196,8 @@ body {
 
   /* Mejorar el área de toque en elementos interactivos pequeños */
   @media (max-width: 640px) {
-    button, a {
+    button,
+    a {
       min-height: 44px; /* Tamaño mínimo recomendado para táctil */
       min-width: 44px;
     }
@@ -170,10 +243,11 @@ body {
   }
 
   /* === ANIMACIONES AVANZADAS === */
-  
+
   /* Gradiente animado para el fondo del hero */
   @keyframes gradient-shift {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 50%;
     }
     50% {
@@ -188,7 +262,8 @@ body {
 
   /* Partículas flotantes */
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) translateX(0);
       opacity: 0;
     }
@@ -205,7 +280,8 @@ body {
   }
 
   @keyframes float1 {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) translateX(0);
     }
     50% {
@@ -214,7 +290,8 @@ body {
   }
 
   @keyframes float2 {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) translateX(0);
     }
     50% {
@@ -223,7 +300,8 @@ body {
   }
 
   @keyframes float3 {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0) translateX(0);
     }
     50% {
@@ -249,7 +327,8 @@ body {
 
   /* Efecto blob en movimiento */
   @keyframes blob {
-    0%, 100% {
+    0%,
+    100% {
       transform: translate(0, 0) scale(1);
     }
     33% {
@@ -266,7 +345,8 @@ body {
 
   /* Bounce suave para badges */
   @keyframes bounce-slow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -295,7 +375,8 @@ body {
 
   /* Pulse suave para elementos decorativos */
   @keyframes pulse-slow {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.6;
       transform: scale(1);
     }
@@ -338,8 +419,29 @@ body {
     animation-delay: 4000ms;
   }
 
+  /* === UTILIDADES PARA POEMAS === */
+  .poem-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+  }
+
+  /* Estilo elegante para stanzas (estrofas) */
+  .poem-text p {
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 640px) {
+    .poem-text {
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+  }
+
   /* === UTILIDADES === */
-  
+
   /* Truncado de texto */
   .line-clamp-2 {
     display: -webkit-box;
@@ -387,7 +489,8 @@ body {
 
   /* Animación de estrellas parpadeantes */
   @keyframes star-twinkle {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.2;
     }
     50% {
@@ -412,7 +515,8 @@ body {
 
   /* Rayos del sol pulsantes */
   @keyframes sun-ray {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 0.2;
       transform: translate(-50%, -50%) rotate(var(--rotation)) scale(1);
     }

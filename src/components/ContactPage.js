@@ -39,16 +39,30 @@ const ContactPage = ({ poetName }) => {
       <div className="container mx-auto px-6 max-w-3xl relative z-10">
         <div className="text-center mb-6">
           <span className="inline-flex items-center gap-2 px-8 py-3 btn-glass theme-brand-text text-sm font-bold rounded-full shadow-xl mb-4 border-2 border-amber-500/20 dark:border-cyan-500/20">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l9-5 9 5" />
+            <svg
+              className="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l9-5 9 5"
+              />
             </svg>
             Contáctanos
           </span>
         </div>
 
         <h2 className="text-6xl md:text-7xl font-bold text-center theme-brand-text mb-16 drop-shadow-lg">
-          <span className="block text-4xl md:text-5xl mb-2 opacity-90">¡Hablemos!</span>
-          <span className="animate-text-shimmer bg-gradient-to-r from-amber-600 via-orange-500 to-red-600 dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent bg-[length:200%_auto]">Contacto</span>
+          <span className="block text-4xl md:text-5xl mb-2 opacity-90">
+            ¡Hablemos!
+          </span>
+          <span className="animate-text-shimmer bg-gradient-to-r from-amber-600 via-orange-500 to-red-600 dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent bg-[length:200%_auto]">
+            Contacto
+          </span>
         </h2>
 
         <div className="group relative">
@@ -56,13 +70,25 @@ const ContactPage = ({ poetName }) => {
 
           <div className="relative surface backdrop-blur-xl rounded-3xl shadow-2xl p-8 md:p-12 border-2 border-amber-200/30 dark:border-cyan-500/30">
             <p className="text-gray-700 dark:text-gray-300 text-lg md:text-xl mb-8 text-center leading-relaxed">
-              ¿Tienes alguna pregunta, comentario o simplemente quieres saludar a <span className="font-bold theme-brand-text">{poetName}</span>? ¡Nos encantaría escucharte!
+              ¿Tienes alguna pregunta, comentario o simplemente quieres saludar
+              a <span className="font-bold theme-brand-text">{poetName}</span>?
+              ¡Nos encantaría escucharte!
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <a href="https://www.facebook.com/miguel.Zuniga.678235/about" target="_blank" rel="noopener noreferrer" className="relative">
+              <a
+                href="https://www.facebook.com/miguel.Zuniga.678235/about"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative"
+              >
                 <div className="relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-full shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.815c-3.238 0-4.185 1.279-4.185 4.538v2.462z" />
                   </svg>
                   Facebook
@@ -70,8 +96,19 @@ const ContactPage = ({ poetName }) => {
               </a>
               <a href="mailto:miguelgonzalez08@hotmail.es" className="relative">
                 <div className="relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 to-pink-600 text-white rounded-full shadow-lg">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l9-5 9 5" />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-5 w-5"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8m-18 0l9-5 9 5"
+                    />
                   </svg>
                   Enviar Correo
                 </div>
@@ -80,13 +117,20 @@ const ContactPage = ({ poetName }) => {
 
             <div className="flex items-center gap-4 mb-10">
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent dark:via-cyan-500/50"></div>
-              <span className="text-gray-500 dark:text-gray-400 text-sm font-semibold">o escríbenos directamente</span>
+              <span className="text-gray-500 dark:text-gray-400 text-sm font-semibold">
+                o escríbenos directamente
+              </span>
               <div className="flex-1 h-px bg-gradient-to-r from-transparent via-amber-500/50 to-transparent dark:via-cyan-500/50"></div>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="relative">
-                <label htmlFor="name" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Tu Nombre:</label>
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                >
+                  Tu Nombre:
+                </label>
                 <input
                   type="text"
                   id="name"
@@ -98,7 +142,12 @@ const ContactPage = ({ poetName }) => {
                 />
               </div>
               <div className="relative">
-                <label htmlFor="email" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Tu Email:</label>
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                >
+                  Tu Email:
+                </label>
                 <input
                   type="email"
                   id="email"
@@ -110,7 +159,12 @@ const ContactPage = ({ poetName }) => {
                 />
               </div>
               <div className="relative">
-                <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2">Tu Mensaje:</label>
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 dark:text-gray-300 text-sm font-bold mb-2"
+                >
+                  Tu Mensaje:
+                </label>
                 <textarea
                   id="message"
                   name="message"
@@ -128,12 +182,32 @@ const ContactPage = ({ poetName }) => {
                   className="relative w-full bg-gradient-to-r from-amber-600 via-orange-500 to-red-600 dark:from-cyan-600 dark:via-blue-500 dark:to-indigo-600 text-white font-bold py-4 px-6 rounded-xl focus:outline-none shadow-2xl transition-all duration-300"
                 >
                   <span className="relative z-10 flex items-center justify-center gap-3">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                      />
                     </svg>
                     Enviar Mensaje
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <svg
+                      className="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
                     </svg>
                   </span>
                 </button>
@@ -143,8 +217,18 @@ const ContactPage = ({ poetName }) => {
                 <div>
                   <div className="bg-green-50 dark:bg-green-900/30 border-2 border-green-500 rounded-xl p-4 mt-6">
                     <p className="text-center text-green-700 dark:text-green-300 font-semibold flex items-center justify-center gap-2">
-                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      <svg
+                        className="w-6 h-6"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
                       </svg>
                       {status}
                     </p>

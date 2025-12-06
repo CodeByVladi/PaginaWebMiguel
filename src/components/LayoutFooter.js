@@ -9,10 +9,7 @@ const LayoutFooter = () => {
           los derechos reservados.
         </p>
         <div className="flex justify-center space-x-4 mt-4">
-          <a
-            href="#"
-            className="hover-text-brand transition-colors"
-          >
+          <a href="#" className="hover-text-brand transition-colors">
             Política de Privacidad
           </a>
         </div>

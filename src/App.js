@@ -48,10 +48,10 @@ const App = () => {
   // Al cambiar de sección, vuelve al inicio de la página con scroll suave mejorado
   useEffect(() => {
     // Scroll instantáneo primero para evitar animaciones raras
-    window.scrollTo({ top: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, behavior: "instant" });
     // Pequeño delay para asegurar que el contenido se renderizó
     requestAnimationFrame(() => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }, [currentPage]);
 
@@ -142,7 +142,9 @@ const App = () => {
         toggleMenu={toggleMenu}
         setCurrentPage={setCurrentPage}
       />
-      <main className="min-h-screen pt-16 sm:pt-20 md:pt-24">{renderPage()}</main>
+      <main className="min-h-screen pt-16 sm:pt-20 md:pt-24">
+        {renderPage()}
+      </main>
       <LayoutFooter />
     </div>
   );

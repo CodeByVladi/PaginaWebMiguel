@@ -2,7 +2,8 @@
 export const allPoems = [
   {
     title: "El mendigo del fulgor",
-    excerpt: "Nadie lo mira, pero él ve más lejos que todos. En el cartón donde duerme, la noche le escribe secretos con chispas de luciérnagas...",
+    excerpt:
+      "Nadie lo mira, pero él ve más lejos que todos. En el cartón donde duerme, la noche le escribe secretos con chispas de luciérnagas...",
     content: `Nadie lo mira,
 pero él ve más lejos que todos.
 En el cartón donde duerme,
@@ -41,11 +42,12 @@ Dicen que aún vaga por las calles,
 con un corazón que suena a campanas viejas,
 como si cada latido le echara en cara
 que nunca tuvo nada más
-que amor.`
+que amor.`,
   },
   {
     title: "Contigo",
-    excerpt: "Pasar ese tramo de mi vida contigo fue un viaje. Pero no uno de esos viajes tristes que se deshacen como humo. Fue un viaje alegre, tibio, lleno de intensidad...",
+    excerpt:
+      "Pasar ese tramo de mi vida contigo fue un viaje. Pero no uno de esos viajes tristes que se deshacen como humo. Fue un viaje alegre, tibio, lleno de intensidad...",
     content: `Pasar ese tramo de mi vida contigo
 fue un viaje.
 Pero no uno de esos viajes tristes
@@ -69,11 +71,12 @@ como dos puertas al paraíso.
 Tus besos, ansiosos,
 parecían tener memoria propia,
 y siempre había un canasto repleto de te quieros
-madurados al sol de tu cariño.`
+madurados al sol de tu cariño.`,
   },
   {
     title: "Sequía por fuera, diluvio por dentro",
-    excerpt: "Hace rato que no hay un aguacero en mi ciudad. Las nubes pasan como turistas distraídas, y los árboles, de tan secos, ya no hacen sombra. Pero en mi corazón ha crecido la lluvia...",
+    excerpt:
+      "Hace rato que no hay un aguacero en mi ciudad. Las nubes pasan como turistas distraídas, y los árboles, de tan secos, ya no hacen sombra. Pero en mi corazón ha crecido la lluvia...",
     content: `Hace rato que no hay un aguacero en mi ciudad.
 Las nubes pasan como turistas distraídas,
 y los árboles, de tan secos, ya no hacen sombra.
@@ -111,11 +114,12 @@ ni fecha,
 ni cielo.
 
 Porque hay sequías que florecen en la tierra,
-y lluvias que solo brotan en el alma.`
+y lluvias que solo brotan en el alma.`,
   },
   {
     title: "Amor a pleno pulmón",
-    excerpt: "Te amo, ¡qué palabra tan peligrosa! Explota en la boca como dinamita envuelta en perfume. No tengo rosas, tengo calles, zapatos rotos, y un pecho que se desangra con elegancia...",
+    excerpt:
+      "Te amo, ¡qué palabra tan peligrosa! Explota en la boca como dinamita envuelta en perfume. No tengo rosas, tengo calles, zapatos rotos, y un pecho que se desangra con elegancia...",
     content: `Te amo,
 ¡qué palabra tan peligrosa!
 Explota en la boca
@@ -150,11 +154,12 @@ sucios,
 imperfectos,
 vivos,
 gritando amor
-como quien lanza una piedra contra la costumbre.`
+como quien lanza una piedra contra la costumbre.`,
   },
   {
     title: "Descansas en mí",
-    excerpt: "Hay tardes en que tu recuerdo cae despacio, como una hoja cansada que busca un hombro donde quedarse. No hace ruido. Solo llega, y ya con eso la casa respira distinto...",
+    excerpt:
+      "Hay tardes en que tu recuerdo cae despacio, como una hoja cansada que busca un hombro donde quedarse. No hace ruido. Solo llega, y ya con eso la casa respira distinto...",
     content: `Hay tardes
 en que tu recuerdo cae despacio,
 como una hoja cansada
@@ -208,11 +213,12 @@ sin reclamos.
 
 Apenas
 la forma en que descansas en mí
-cuando pienso en ti.`
+cuando pienso en ti.`,
   },
   {
     title: "Amanecer en el Alma",
-    excerpt: "Cuando el sol asoma en el horizonte del alma, los miedos se disipan como niebla matutina. Un nuevo día, una nueva esperanza, un lienzo en blanco para pintar sueños...",
+    excerpt:
+      "Cuando el sol asoma en el horizonte del alma, los miedos se disipan como niebla matutina. Un nuevo día, una nueva esperanza, un lienzo en blanco para pintar sueños...",
     content: `Cuando el sol asoma en el horizonte del alma,
 los miedos se disipan como niebla matutina.
 Un nuevo día, una nueva esperanza,
@@ -226,11 +232,12 @@ un milagro constante, un don inagotable.
 Que la luz inunde cada rincón,
 que la paz habite en cada pensamiento.
 Amanecer en el alma, dulce bendición,
-un renacer eterno, un puro sentimiento.`
+un renacer eterno, un puro sentimiento.`,
   },
   {
     title: "El Silencio del Mar",
-    excerpt: "El mar, testigo mudo de mil historias, guarda secretos en sus profundidades. Sus olas, susurros de tiempos idos, acarician la orilla con melancolía...",
+    excerpt:
+      "El mar, testigo mudo de mil historias, guarda secretos en sus profundidades. Sus olas, susurros de tiempos idos, acarician la orilla con melancolía...",
     content: `El mar, testigo mudo de mil historias,
 guarda secretos en sus profundidades.
 Sus olas, susurros de tiempos idos,
@@ -244,11 +251,12 @@ un abrazo salado, un consuelo bendito.
 Las gaviotas danzan en el cielo,
 libres, sin ataduras, sin temor.
 El mar, un espejo del anhelo,
-un refugio eterno, un eterno amor.`
+un refugio eterno, un eterno amor.`,
   },
   {
     title: "Jardín de Recuerdos",
-    excerpt: "En el jardín de mis recuerdos, florecen las sonrisas y las lágrimas. Cada pétalo, una historia; cada aroma, un suspiro. Un lugar donde el tiempo se detiene...",
+    excerpt:
+      "En el jardín de mis recuerdos, florecen las sonrisas y las lágrimas. Cada pétalo, una historia; cada aroma, un suspiro. Un lugar donde el tiempo se detiene...",
     content: `En el jardín de mis recuerdos,
 florecen las sonrisas y las lágrimas.
 Cada pétalo, una historia;
@@ -262,11 +270,12 @@ entre los senderos que el alma teje.
 El sol ilumina las flores marchitas,
 pero su esencia perdura en el aire.
 Jardín de recuerdos, morada bendita,
-un tesoro guardado, un dulce donaire.`
+un tesoro guardado, un dulce donaire.`,
   },
   {
     title: "La Danza de las Estrellas",
-    excerpt: "En la noche infinita, las estrellas danzan, un ballet cósmico de luz y misterio. Cada punto brillante, un sueño lejano, un secreto guardado en el firmamento...",
+    excerpt:
+      "En la noche infinita, las estrellas danzan, un ballet cósmico de luz y misterio. Cada punto brillante, un sueño lejano, un secreto guardado en el firmamento...",
     content: `En la noche infinita, las estrellas danzan,
 un ballet cósmico de luz y misterio.
 Cada punto brillante, un sueño lejano,
@@ -280,11 +289,12 @@ que el alma escucha con ternura.
 Que la magia de la noche nos envuelva,
 que los sueños se eleven sin temor.
 La danza de las estrellas, una nueva,
-un canto de esperanza, un eterno amor.`
+un canto de esperanza, un eterno amor.`,
   },
   {
     title: "El Suspiro del Viento",
-    excerpt: "El viento, mensajero invisible, susurra historias en cada rincón. Lleva consigo el aroma de la tierra, el eco de las voces, el latido del corazón...",
+    excerpt:
+      "El viento, mensajero invisible, susurra historias en cada rincón. Lleva consigo el aroma de la tierra, el eco de las voces, el latido del corazón...",
     content: `El viento, mensajero invisible,
 susurra historias en cada rincón.
 Lleva consigo el aroma de la tierra,
@@ -298,11 +308,12 @@ un abrazo invisible, un dulce lamento.
 Que su fuerza nos impulse a volar,
 que su brisa nos traiga paz y calma.
 El viento, un amigo fiel, un mar,
-un susurro eterno que acaricia el alma.`
+un susurro eterno que acaricia el alma.`,
   },
   {
     title: "Puentes de Cristal",
-    excerpt: "Construimos puentes de cristal sobre abismos de dudas, uniendo almas con hilos invisibles. Frágiles pero fuertes, nos conectan en la distancia...",
+    excerpt:
+      "Construimos puentes de cristal sobre abismos de dudas, uniendo almas con hilos invisibles. Frágiles pero fuertes, nos conectan en la distancia...",
     content: `Construimos puentes de cristal
 sobre abismos de dudas,
 uniendo almas con hilos invisibles.
@@ -317,11 +328,12 @@ la esperanza florece.
 Que la luz atraviese el cristal,
 que el amor sea nuestro guía.
 Puentes de cristal, un portal,
-hacia un nuevo amanecer, cada día.`
+hacia un nuevo amanecer, cada día.`,
   },
   {
     title: "El Canto del Río",
-    excerpt: "El río, alma de la tierra, canta su melodía eterna. Sus aguas, espejo del cielo, reflejan la vida que fluye sin cesar...",
+    excerpt:
+      "El río, alma de la tierra, canta su melodía eterna. Sus aguas, espejo del cielo, reflejan la vida que fluye sin cesar...",
     content: `El río, alma de la tierra,
 canta su melodía eterna.
 Sus aguas, espejo del cielo,
@@ -335,11 +347,12 @@ un bálsamo para el alma, un don celestial.
 Que su corriente nos lleve lejos,
 que su fuerza nos impulse a soñar.
 El río, un maestro de consejos,
-un camino de vida, un eterno mar.`
+un camino de vida, un eterno mar.`,
   },
   {
     title: "Sombras y Luces",
-    excerpt: "En el juego de sombras y luces, la vida se revela en su dualidad. La oscuridad abraza la esperanza, la luz disipa el temor...",
+    excerpt:
+      "En el juego de sombras y luces, la vida se revela en su dualidad. La oscuridad abraza la esperanza, la luz disipa el temor...",
     content: `En el juego de sombras y luces,
 la vida se revela en su dualidad.
 La oscuridad abraza la esperanza,
@@ -353,8 +366,8 @@ que el universo en su danza nos hace.
 Que aceptemos la sombra con amor,
 que busquemos la luz con pasión.
 Sombras y luces, un eterno fulgor,
-un camino de vida, una dulce canción.`
-  }
+un camino de vida, una dulce canción.`,
+  },
 ];
 
 // Los 3 poemas más recientes para mostrar en la página principal
