@@ -205,7 +205,16 @@ const LayoutHeader = ({
               className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-cyan-400 transition-all duration-300 font-medium group rounded-lg hover:bg-amber-50/50 dark:hover:bg-gray-800/50"
             >
               <span className="relative z-10">Biografía</span>
+                <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-red-500 dark:from-cyan-400 dark:to-indigo-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute inset-0 rounded-lg bg-amber-100/0 dark:bg-cyan-500/0 group-hover:bg-amber-100/40 dark:group-hover:bg-cyan-500/10 transition-all duration-300"></span>
+              </button>
+              <button
+                onClick={() => setCurrentPage("events")}
+                className="relative px-4 py-2 text-gray-600 dark:text-gray-300 hover:text-amber-600 dark:hover:text-cyan-400 transition-all duration-300 font-medium group rounded-lg hover:bg-amber-50/70 dark:hover:bg-gray-800/60 backdrop-blur-sm"
+              >
+                <span className="relative z-10">Eventos</span>
               <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-500 to-red-500 dark:from-cyan-400 dark:to-indigo-400 group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute inset-0 rounded-lg bg-amber-100/0 dark:bg-cyan-500/0 group-hover:bg-amber-100/40 dark:group-hover:bg-cyan-500/10 transition-all duration-300"></span>
             </button>
             <button
               onClick={() => setCurrentPage("contact")}

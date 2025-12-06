@@ -57,8 +57,9 @@ const PoemsPage = ({ setCurrentPage, setSelectedPoem }) => {
 
               {/* Tarjeta principal */}
               <div className="relative surface backdrop-blur-xl rounded-2xl p-8 shadow-xl border-2 border-orange-200/50 dark:border-cyan-400/30 group-hover:border-orange-400/70 dark:group-hover:border-cyan-400/70 transition-all duration-500">
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-100/0 via-orange-100/0 to-red-100/0 dark:from-cyan-500/0 dark:via-blue-500/0 dark:to-indigo-500/0 group-hover:from-amber-100/40 group-hover:via-orange-100/30 group-hover:to-red-100/20 dark:group-hover:from-cyan-500/10 dark:group-hover:via-blue-500/5 dark:group-hover:to-indigo-500/5 transition-all duration-500 pointer-events-none"></div>
                 {/* Ícono decorativo */}
-                <div className="mb-4 opacity-40 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="mb-4 opacity-40 group-hover:opacity-100 transition-opacity duration-300 relative z-10">
                   <svg
                     className="w-8 h-8 theme-brand-text"
                     fill="currentColor"
@@ -69,25 +70,25 @@ const PoemsPage = ({ setCurrentPage, setSelectedPoem }) => {
                 </div>
 
                 {/* Título */}
-                <h3 className="text-2xl font-bold text-base-color mb-4 group-hover:theme-brand-text transition-all duration-300 leading-tight">
+                  <h3 className="text-2xl font-bold font-display text-base-color mb-4 group-hover:theme-brand-text transition-all duration-300 leading-tight relative z-10">
                   {poem.title}
                 </h3>
 
                 {/* Línea decorativa */}
-                <div className="w-16 h-1 bg-gradient-to-r from-orange-400 to-red-400 dark:from-cyan-400 dark:to-indigo-400 mb-4 group-hover:w-24 transition-all duration-300"></div>
+                  <div className="w-16 h-1 bg-gradient-to-r from-orange-400 to-red-400 dark:from-cyan-400 dark:to-indigo-400 mb-4 group-hover:w-24 transition-all duration-300 relative z-10 shadow-lg shadow-orange-400/50"></div>
 
                 {/* Contenido */}
-                <p className="text-muted italic mb-6 line-clamp-5 leading-relaxed group-hover:text-base-color transition-colors duration-300">
+                  <p className="text-muted italic mb-6 line-clamp-5 leading-relaxed group-hover:text-base-color transition-colors duration-300 relative z-10">
                   {poem.content.substring(0, 200)}...
                 </p>
 
                 {/* Botón */}
-                <button
+                  <button 
                   onClick={(e) => {
                     e.stopPropagation();
                     handleViewPoem(poem);
                   }}
-                  className="inline-flex items-center gap-2 theme-brand-text font-bold text-sm group-hover:gap-3 transition-all duration-300"
+                    className="inline-flex items-center gap-2 theme-brand-text font-bold text-sm group-hover:gap-3 transition-all duration-300 relative z-10 px-3 py-1.5 rounded-full hover:bg-amber-100/40 dark:hover:bg-cyan-500/10 backdrop-blur-sm"
                 >
                   Leer completo
                   <svg
