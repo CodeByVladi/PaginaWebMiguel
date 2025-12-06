@@ -102,7 +102,7 @@ const HomeWelcome = ({ poetName, setCurrentPage }) => {
           </span>
         </div>
 
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white leading-tight mb-4 sm:mb-6 animate-fade-in-up drop-shadow-2xl">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold font-display text-white leading-tight mb-4 sm:mb-6 animate-fade-in-up drop-shadow-2xl">
           <span className="block sm:inline">
             Bienvenido al universo poético de
           </span>{" "}

@@ -60,7 +60,7 @@ const LayoutHeader = ({
     <header className="fixed w-full top-0 z-50 backdrop-blur-xl bg-white/80 dark:bg-gray-900/80 shadow-2xl border-b border-amber-200/20 dark:border-cyan-500/20 transition-all duration-300">
       <div className="absolute inset-0 bg-gradient-to-r from-amber-50/50 via-orange-50/30 to-red-50/50 dark:from-gray-900/50 dark:via-gray-800/30 dark:to-gray-900/50 pointer-events-none"></div>
       <nav className="relative container mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
-        <div className="group text-lg sm:text-xl md:text-2xl font-bold hover:scale-105 transition-all duration-300 cursor-pointer">
+        <div className="group text-lg sm:text-xl md:text-2xl font-bold font-display hover:scale-105 transition-all duration-300 cursor-pointer">
           <span className="relative inline-block">
             <span className="hidden sm:inline bg-gradient-to-r from-amber-600 via-orange-500 to-red-600 dark:from-cyan-400 dark:via-blue-400 dark:to-indigo-400 bg-clip-text text-transparent drop-shadow-sm">
               Versos de Miguel Ángel
