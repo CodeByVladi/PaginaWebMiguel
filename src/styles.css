@@ -222,6 +222,23 @@ body {
     }
   }
 
+  /* === UTILIDADES PARA POEMAS === */
+  .poem-text {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+  }
+
+  @media (max-width: 640px) {
+    .poem-text {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      letter-spacing: 0.2px;
+    }
+  }
+
   /* === ANIMACIONES BÁSICAS === */
   @keyframes fade-in {
     from {

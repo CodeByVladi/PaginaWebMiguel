@@ -95,7 +95,7 @@ const PoemDetailPage = ({ poem, setCurrentPage }) => {
             className="animate-fade-in"
             style={{ animationDelay: "300ms" }}
           >
-            <p className="text-gray-800 dark:text-gray-200 whitespace-pre-wrap leading-relaxed text-base sm:text-lg md:text-xl font-serif font-light tracking-wide px-2 sm:px-4 md:px-6 lg:px-8 xl:px-12 max-w-3xl mx-auto">
+            <p className="poem-text text-gray-800 dark:text-gray-200 font-serif font-light px-3 sm:px-4 md:px-6 lg:px-8 xl:px-12 max-w-4xl mx-auto">
               {poem.content}
             </p>
           </div>
