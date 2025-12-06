@@ -27,7 +27,7 @@ const HomeVideosCTA = ({ setCurrentPage }) => {
         </div>
 
         {/* Título épico */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold font-display mb-6 animate-fade-in-up">
           <span className="block theme-brand-text drop-shadow-lg">
             ¿Quieres sentir los versos
           </span>

@@ -85,12 +85,12 @@ const VideosPage = () => {
               Galería de Videos
             </span>
           </div>
-          <h1
-            className="text-5xl md:text-7xl font-extrabold theme-brand-text mb-6 drop-shadow-xl animate-text-shimmer"
+          <h2 
+            className="text-5xl md:text-7xl font-extrabold font-display theme-brand-text mb-6 drop-shadow-xl animate-text-shimmer"
             style={{ backgroundSize: "200% auto" }}
           >
             Videos
-          </h1>
+          </h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed font-light">
             Recitales y lecturas de poemas que dan vida a la palabra
           </p>

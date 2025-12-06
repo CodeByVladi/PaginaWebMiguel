@@ -57,7 +57,7 @@ const HomeBookSection = ({ setCurrentPage }) => {
           <span className="inline-block px-4 py-2 btn-glass text-brand text-sm font-semibold rounded-full mb-4 shadow-lg">
             📚 BIBLIOTECA
           </span>
-          <h2 className="text-4xl md:text-5xl font-extrabold theme-brand-text mb-4 drop-shadow-lg">
+          <h2 className="text-4xl md:text-5xl font-extrabold font-display theme-brand-text mb-4 drop-shadow-lg">
             Libros Populares
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">

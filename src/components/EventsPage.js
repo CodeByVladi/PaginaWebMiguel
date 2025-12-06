@@ -27,7 +27,7 @@ const EventsPage = () => {
             </span>
           </div>
           <h2
-            className="text-5xl md:text-7xl font-extrabold theme-brand-text mb-6 drop-shadow-xl animate-text-shimmer"
+          <h2 className="text-5xl md:text-7xl font-extrabold font-display theme-brand-text mb-6 drop-shadow-xl animate-text-shimmer">
             style={{ backgroundSize: "200% auto" }}
           >
             Eventos y Noticias

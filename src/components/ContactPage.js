@@ -56,7 +56,7 @@ const ContactPage = ({ poetName }) => {
           </span>
         </div>
 
-        <h2 className="text-6xl md:text-7xl font-bold text-center theme-brand-text mb-16 drop-shadow-lg">
+        <h2 className="text-6xl md:text-7xl font-bold font-display text-center theme-brand-text mb-16 drop-shadow-lg">
           <span className="block text-4xl md:text-5xl mb-2 opacity-90">
             ¡Hablemos!
           </span>

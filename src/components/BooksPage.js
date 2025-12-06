@@ -84,7 +84,7 @@ const BooksPage = () => {
               </span>
             </div>
             <h2
-              className="text-5xl md:text-7xl font-extrabold theme-brand-text drop-shadow-xl animate-text-shimmer"
+              className="text-5xl md:text-7xl font-extrabold font-display theme-brand-text drop-shadow-xl animate-text-shimmer"
               style={{ backgroundSize: "200% auto" }}
             >
               Todos los Libros

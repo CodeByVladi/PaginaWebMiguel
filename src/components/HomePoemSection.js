@@ -39,7 +39,7 @@ const HomePoemSection = ({ setCurrentPage, setSelectedPoem }) => {
               DESTACADOS
             </span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 animate-fade-in-up">
+          <h2 className="text-5xl md:text-6xl font-extrabold font-display mb-6 animate-fade-in-up">
             <span className="block theme-brand-text drop-shadow-lg">
               Poesía que toca
             </span>
