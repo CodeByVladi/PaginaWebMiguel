@@ -640,4 +640,5 @@ yo también puedo volar.`,
 ];
 
 // Los 3 poemas más recientes para mostrar en la página principal
-export const featuredPoems = allPoems.slice(0, 3);
+// Mostramos los últimos 3 poemas agregados: "Cristo entre las partículas", "Amor de Lunes a Sábado", "Yo también puedo volar"
+export const featuredPoems = allPoems.slice(-3);
