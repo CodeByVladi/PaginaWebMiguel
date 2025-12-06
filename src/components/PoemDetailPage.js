@@ -77,7 +77,7 @@ const PoemDetailPage = ({ poem, setCurrentPage }) => {
           Volver a todos los poemas
         </button>
         <div
-          className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-700 dark:to-gray-800 backdrop-blur-lg rounded-2xl shadow-2xl p-3 sm:p-4 md:p-6 lg:p-12 border-2 border-purple-200/50 dark:border-purple-700/50 animate-fade-in-up mx-1 sm:mx-0"
+          className="bg-gradient-to-br from-gray-100 to-gray-50 dark:from-gray-700 dark:to-gray-800 backdrop-blur-lg rounded-2xl shadow-2xl p-2 sm:p-3 md:p-6 lg:p-12 border-2 border-purple-200/50 dark:border-purple-700/50 animate-fade-in-up mx-0.5 sm:mx-0"
           style={{ animationDelay: "150ms" }}
         >
           <div className="text-center mb-8">
@@ -95,7 +95,7 @@ const PoemDetailPage = ({ poem, setCurrentPage }) => {
             className="animate-fade-in"
             style={{ animationDelay: "300ms" }}
           >
-            <p className="poem-text text-gray-800 dark:text-gray-200 font-serif font-light px-1 sm:px-2 md:px-4 lg:px-8 xl:px-12 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto">
+            <p className="poem-text text-gray-800 dark:text-gray-200 font-serif font-light px-0.5 sm:px-1 md:px-4 lg:px-8 xl:px-12 max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto">
               {poem.content}
             </p>
           </div>
